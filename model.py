@@ -28,15 +28,7 @@ class ConvModel:
     self.model = Sequential()
     self.model.add(Conv2D(2, kernel_size=(13, 13),
                  activation='relu'))
-    #self.model.add(Conv2D(32, (3, 3), activation='relu'))
-    #self.model.add(MaxPooling2D(pool_size=(2, 2)))
-    #self.model.add(Conv2D(64, (3, 3), activation='relu'))
-    #self.model.add(MaxPooling2D(pool_size=(2, 2)))
     self.model.add(Flatten())
-    #self.model.add(Dense(16, activation='relu'))
-    #self.model.add(Dropout(0.2))
-    #self.model.add(Dense(8, activation='relu'))
-    #self.model.add(Dropout(0.2))
     self.model.add(Dense(self.num_classes, activation='softmax'))
   
   # Deeper model
